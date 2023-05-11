@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'imageUi.ui'
+# Form implementation generated from reading ui file 'imageUI.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.9
 #
@@ -50,7 +50,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_3 = QtWidgets.QHBoxLayout(self.widget_2)
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
         self.imageLabel = QtWidgets.QLabel(self.widget_2)
-        self.imageLabel.setStyleSheet("image: url(:/newPrefix/chickSan.png);")
+        self.imageLabel.setStyleSheet("image: url(:/newPrefix/bird.jpg);")
         self.imageLabel.setText("")
         self.imageLabel.setObjectName("imageLabel")
         self.horizontalLayout_3.addWidget(self.imageLabel)

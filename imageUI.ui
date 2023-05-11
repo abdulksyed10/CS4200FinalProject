@@ -60,7 +60,7 @@ font-size: 30pt;</string>
        <item>
         <widget class="QLabel" name="imageLabel">
          <property name="styleSheet">
-          <string notr="true">image: url(:/newPrefix/chickSan.png);</string>
+          <string notr="true">image: url(:/newPrefix/bird.jpg);</string>
          </property>
          <property name="text">
           <string/>
@@ -170,7 +170,7 @@ font-size: 15pt;</string>
   </widget>
  </widget>
  <resources>
-  <include location="source.qrc"/>
+  <include location="source_rc.qrc"/>
  </resources>
  <connections/>
 </ui>

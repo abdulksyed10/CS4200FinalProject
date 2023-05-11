@@ -1,5 +1,7 @@
 <RCC>
   <qresource prefix="newPrefix">
+    <file>bird.jpg</file>
+    <file>holder.png</file>
     <file>chickSan.png</file>
     <file>dihydrogenMonoxide.png</file>
     <file>mack.png</file>

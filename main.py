@@ -1,4 +1,4 @@
-'''import sys
+import sys
 from PyQt5 import QtWidgets
 import imageUiAttached
 
@@ -7,6 +7,7 @@ app = QtWidgets.QApplication(sys.argv)
 imageUI_win = QtWidgets.QMainWindow()
 imageUI_ui = imageUiAttached.imageUiAttached(imageUI_win)
 app.exec_()
+
 '''
 import cv2 as cv
 import numpy as np
@@ -20,7 +21,6 @@ training_images, testing_images = training_images / 255, testing_images / 255
 
 class_names = ['Plane', 'Car', 'Bird', 'Cat', 'Deer', 'Dog', 'Frog', 'Horse', 'Ship', 'Truck']
 
-'''
 for i in range(16):
     plt.subplot(4,4,i+1)
     plt.xticks([])
@@ -29,14 +29,12 @@ for i in range(16):
     plt.xlabel(class_names[training_labels[i][0]])
 
 plt.show()
-'''
 
-training_images = training_images[:200000]
-training_labels = training_labels[:200000]
-testing_images = testing_images[:4000]
-testing_labels = testing_labels[:4000]
+training_images = training_images[:20000000]
+training_labels = training_labels[:20000000]
+testing_images = testing_images[:400000]
+testing_labels = testing_labels[:400000]
 
-'''
 model = models.Sequential()
 model.add(layers.Conv2D(32, (3,3), activation='relu', input_shape=(32,32,3)))
 model.add(layers.MaxPooling2D(2,2))
@@ -55,12 +53,11 @@ print(f"Loss: {loss}")
 print(f"Accuracy: {accuracy}")
 
 model.save('image_classifier.model')
-'''
 
 model = models.load_model('image_classifier.model')
 
-#img = random.randint(0, len(testing_images))
-img = cv.imread('watch.jpg')
+img = cv.imread('plane.jpg')
+img = cv.resize(img, (32, 32), interpolation=cv.INTER_AREA)
 img = cv.cvtColor(img, cv.COLOR_BGR2RGB)
 
 plt.imshow(img, cmap=plt.cm.binary)
@@ -70,3 +67,4 @@ index = np.argmax(prediction)
 print(f'Prediction is {class_names[index]}')
 
 plt.show()
+'''
